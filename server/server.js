@@ -7,8 +7,10 @@ const _ = require('lodash');
 
 const {mongoose} = require('./db/mongoose');
 const {Todo} = require('./models/todo');
-
+const cors = require('cors')
 const app = express();
+
+app.use(cors())
 const port = process.env.PORT;
 
 app.use(bodyParser.json());
